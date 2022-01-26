@@ -767,6 +767,7 @@ function animateScroll() {
 }
 
 var canvas = document.getElementById("canvas");
+console.log(canvas);
 var renderer = new THREE.WebGLRenderer({
     canvas: canvas
 });
