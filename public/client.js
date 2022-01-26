@@ -481,7 +481,7 @@ function updateCamera() {
 }
 
 function displayGUI() {
-    const gui = new GUI();
+    const gui = new dat.GUI();
 
     var speed = 0.1;
 
