@@ -1,8 +1,8 @@
-import * as THREE from '/build/three.module.js';
-import Stats from '/jsm/libs/stats.module.js';
-import {
-    GUI
-} from '/jsm/libs/lil-gui.module.min.js';
+// import * as THREE from '/build/three.module.js';
+// import Stats from '/jsm/libs/stats.module.js';
+// import {
+//     GUI
+// } from '/jsm/libs/lil-gui.module.min.js';
 
 
 const scene = new THREE.Scene();
