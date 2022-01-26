@@ -92,7 +92,7 @@ class cubeObject {
 
 const MASTER = {
     CURRENT: {
-        STAGE: 0,
+        STAGE: 1,
         position: {
             SETTINGS: {
                 background: 0x000000,
@@ -199,10 +199,10 @@ const MASTER = {
                     positionZ: 100,
                 },
                 {
-                    color: 0xb2dde,
-                    brightness: 3.367,
+                    color: 0xceeedf,
+                    brightness: 3.302,
                     positionX: -57.055,
-                    positionY: 54.031,
+                    positionY: 40.973,
                     positionZ: -38.732,
                 },
                 {
@@ -265,31 +265,31 @@ const MASTER = {
                 wireframe: false,
             },
             lights: [{
-                    color: 0xa3a3a3,
-                    brightness: 0.01,
-                    positionX: -59.785,
-                    positionY: 54.031,
-                    positionZ: 100,
+                    color: 0xd1ffda,
+                    brightness: 1.212,
+                    positionX: -67.526,
+                    positionY: 51.051,
+                    positionZ: -54.438,
                 },
                 {
-                    color: 0xbeedee,
-                    brightness: 1.995,
-                    positionX: -52.41,
-                    positionY: 16.174,
+                    color: 0xbee2ee,
+                    brightness: 0.494,
+                    positionX: 29.325,
+                    positionY: 38.094,
                     positionZ: -35.203,
                 },
                 {
-                    color: 0xd2cde5,
-                    brightness: 3.712,
-                    positionX: 95.084,
-                    positionY: 41.863,
-                    positionZ: 48.377,
+                    color: 0xe9edb0,
+                    brightness: 2.322,
+                    positionX: 79.059,
+                    positionY: 0.663,
+                    positionZ: 29.325,
                 },
                 {
-                    color: 0xd2cde5,
-                    brightness: 3.221,
-                    positionX: 95.084,
-                    positionY: 6.71,
+                    color: 0xcde5d6,
+                    brightness: 3.106,
+                    positionX: -67.526,
+                    positionY: 52.491,
                     positionZ: 77.876,
                 }
             ],
