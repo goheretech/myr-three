@@ -1,10 +1,3 @@
-import * as THREE from '/build/three.module.js';
-import Stats from '/jsm/libs/stats.module.js';
-import {
-    GUI
-} from '/jsm/libs/lil-gui.module.min.js';
-
-
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -42,7 +35,7 @@ class cubeObject {
     create() {
         let material = new THREE.MeshStandardMaterial({
             color: 0xF7F7FE,
-            metalness: 0.2,
+            metalness: 0.20,
             roughness: 0.15,
             emissiveIntensity: 0.92
         });
