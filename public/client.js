@@ -92,7 +92,7 @@ class cubeObject {
 
 const MASTER = {
     CURRENT: {
-        STAGE: 1,
+        STAGE: 3,
         position: {
             SETTINGS: {
                 background: 0x000000,
@@ -398,7 +398,7 @@ const MASTER = {
                 positionY: 32.17,
                 positionZ: 37.086,
                 rotationX: -10.267,
-                rotationY: 3.007,
+                rotationY: 0.279,
                 rotationZ: 3.007,
             },
             material: {
@@ -533,7 +533,7 @@ function displayGUI() {
     cameraSettings.add(MASTER.STAGES[MASTER.CURRENT.STAGE].CAMERA, 'rotationZ').min(-180).max(180).step(speed * .01).name('Rotation: Z');
     cameraSettings.close();
 
-    gui.open();
+    // gui.open();
 }
 
 
@@ -752,13 +752,13 @@ function animateScroll() {
 
     if (scrollPosition >= 1) {
         console.log("Next Stage");
-        MASTER.CURRENT.STAGE++;
+        // MASTER.CURRENT.STAGE++;
         // MASTER.CURRENT.position.lights[0].positionX = MASTER.STAGES[MASTER.CURRENT.STAGE + 1].lights[0].positionX;
         // MASTER.CURRENT.position.lights[0].positionZ = MASTER.STAGES[MASTER.CURRENT.STAGE + 1].lights[0].positionZ;
         scrollPosition = 0;
     }
     if (scrollPosition <= -1) {
-        console.log("Previous Stage");
+        // console.log("Previous Stage");
         // MASTER.CURRENT.position.lights[0].positionZ = MASTER.STAGES[MASTER.CURRENT.STAGE - 1].lights[0].positionZ;
         // MASTER.CURRENT.position.lights[0].positionX = MASTER.STAGES[MASTER.CURRENT.STAGE - 1].lights[0].positionX;
         MASTER.CURRENT.STAGE--;
@@ -790,7 +790,7 @@ document.addEventListener('pointermove', onPointerMove);
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 window.addEventListener('resize', onWindowResize);
-displayGUI();
+// displayGUI();
 
 createLight(MASTER.STAGES[MASTER.CURRENT.STAGE].lights);
 createGrid();
