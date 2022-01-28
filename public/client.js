@@ -761,7 +761,7 @@ function animateScroll() {
         // console.log("Previous Stage");
         // MASTER.CURRENT.position.lights[0].positionZ = MASTER.STAGES[MASTER.CURRENT.STAGE - 1].lights[0].positionZ;
         // MASTER.CURRENT.position.lights[0].positionX = MASTER.STAGES[MASTER.CURRENT.STAGE - 1].lights[0].positionX;
-        MASTER.CURRENT.STAGE--;
+        // MASTER.CURRENT.STAGE--;
         scrollPosition = 0;
     }
     if (MASTER.CURRENT.STAGE >= MASTER.STAGES.length) {
