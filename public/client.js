@@ -1,8 +1,8 @@
-// import * as THREE from '/build/three.module.js';
-// import Stats from '/jsm/libs/stats.module.js';
-// import {
-//     GUI
-// } from '/jsm/libs/lil-gui.module.min.js';
+import * as THREE from '/build/three.module.js';
+import Stats from '/jsm/libs/stats.module.js';
+import {
+    GUI
+} from '/jsm/libs/lil-gui.module.min.js';
 
 
 const scene = new THREE.Scene();
@@ -93,85 +93,86 @@ class cubeObject {
 const MASTER = {
     CURRENT: {
         STAGE: 3,
-        position: {
-            SETTINGS: {
-                background: 0x000000,
-            },
-            CAMERA: {
-                positionX: 1.671,
-                positionY: 32.17,
-                positionZ: 36.086,
-                rotationX: -10.267,
-                rotationY: 3.007,
-                rotationZ: 3.007,
-            },
-            material: {
-                emissive: 0x000000,
-                color: 0x000000,
-                metalness: 0.0,
-                roughness: 1.00,
-                emissiveIntensity: 0.00,
-                wireframe: false,
-            },
-            lights: [{
-                    color: 0xeecde1,
-                    brightness: 1.147,
-                    positionX: -100,
-                    positionY: 19.378,
-                    positionZ: -67.526,
-                },
-                {
-                    color: 0x4187d2,
-                    brightness: 1.277,
-                    positionX: 52.883,
-                    positionY: 6.421,
-                    positionZ: -35.203,
-                },
-                {
-                    color: 0xd2cde5,
-                    brightness: 2.257,
-                    positionX: 95.084,
-                    positionY: 41.863,
-                    positionZ: 47.977,
-                },
-                {
-                    color: 0xd27f8f,
-                    brightness: 0.01,
-                    positionX: 26.708,
-                    positionY: 28.016,
-                    positionZ: 5.767,
-                }
-            ],
-            fractal: [{
-                    width: 16.8,
-                    speed: -7,
-                    height: 50.8,
-                    translateX: 160,
-                    translateY: -900,
-                },
-                {
-                    width: 22,
-                    speed: -2,
-                    height: 121.5,
-                    translateX: -470,
-                    translateY: -1360,
-                },
-                {
-                    width: 30,
-                    speed: -1,
-                    height: 40,
-                    translateX: 1360,
-                    translateY: -160,
-                }
+        // position: {
+        //     SETTINGS: {
+        //         background: 0x000000,
+        //     },
+        //     CAMERA: {
+        //         positionX: 1.671,
+        //         positionY: 37.653,
+        //         positionZ: 36.086,
+        //         rotationX: -10.267,
+        //         rotationY: 3.007,
+        //         rotationZ: 3.007,
+        //     },
+        //     material: {
+        //         emissive: 0x000000,
+        //         color: 0x000000,
+        //         metalness: 0.0,
+        //         roughness: 1.00,
+        //         emissiveIntensity: 0.00,
+        //         wireframe: false,
+        //     },
+        //     lights: [{
+        //             color: 0x42d959,
+        //             brightness: 1.69,
+        //             positionX: 0,
+        //             positionY: 19.378,
+        //             positionZ: -67.526,
+        //         },
+        //         {
+        //             color: 0x4187d2,
+        //             brightness: 1.3,
+        //             positionX: 53,
+        //             positionY: 6.421,
+        //             positionZ: -35.203,
+        //         },
+        //         {
+        //             color: 0xd2cde5,
+        //             brightness: 2.257,
+        //             positionX: 95.084,
+        //             positionY: 41.863,
+        //             positionZ: 47.977,
+        //         },
+        //         {
+        //             color: 0xd27f8f,
+        //             brightness: 0.01,
+        //             positionX: 26.708,
+        //             positionY: 28.016,
+        //             positionZ: 5.767,
+        //         }
+        //     ],
+        //     fractal: [{
+        //             width: 16.8,
+        //             speed: -7,
+        //             height: 50.8,
+        //             translateX: 160,
+        //             translateY: -900,
+        //         },
+        //         {
+        //             width: 22,
+        //             speed: -2,
+        //             height: 121.5,
+        //             translateX: -470,
+        //             translateY: -1360,
+        //         },
+        //         {
+        //             width: 30,
+        //             speed: -1,
+        //             height: 40,
+        //             translateX: 1360,
+        //             translateY: -160,
+        //         }
 
-            ]
-        },
+        //     ]
+        // },
     },
     OBJS: {
         cubes: [],
         lights: [],
     },
-    STAGES: [{
+    STAGES: [
+        {
             SETTINGS: {
                 background: 0xffffff,
             },
@@ -324,7 +325,7 @@ const MASTER = {
             CAMERA: {
                 positionX: -35.603,
                 positionY: 31.17,
-                positionZ: 28.711,
+                positionZ: 15.595,
                 rotationX: -18.717,
                 rotationY: -35.541,
                 rotationZ: -6.142,
@@ -395,9 +396,9 @@ const MASTER = {
             },
             CAMERA: {
                 positionX: 1.671,
-                positionY: 32.17,
+                positionY: 42.17,
                 positionZ: 37.086,
-                rotationX: -10.267,
+                rotationX: -20.267,
                 rotationY: 0.279,
                 rotationZ: 3.007,
             },
@@ -405,28 +406,28 @@ const MASTER = {
                 emissive: 0x000000,
                 color: 0x000000,
                 metalness: 0.0,
-                roughness: 1.00,
+                roughness: 0.833,
                 emissiveIntensity: 0.00,
                 wireframe: false,
             },
             lights: [{
-                    color: 0xeecde1,
-                    brightness: 1.147,
-                    positionX: -100,
+                    color: 0x3d9fd7,
+                    brightness: 2.53,
+                    positionX: -28,
                     positionY: 19.378,
                     positionZ: -67.526,
                 },
                 {
-                    color: 0x4187d2,
-                    brightness: 1.277,
-                    positionX: 52.883,
+                    color: 0x41d274,
+                    brightness: 1.802,
+                    positionX: 32.883,
                     positionY: 6.421,
                     positionZ: -35.203,
                 },
                 {
-                    color: 0xd2cde5,
-                    brightness: 2.257,
-                    positionX: 95.084,
+                    color: 0x5e3dde,
+                    brightness: 4.794,
+                    positionX: 12,
                     positionY: 41.863,
                     positionZ: 47.977,
                 },
@@ -439,8 +440,8 @@ const MASTER = {
                 }
             ],
             fractal: [{
-                    width: 16.8,
-                    speed: -7,
+                    width: 40,
+                    speed: -14,
                     height: 50.8,
                     translateX: 160,
                     translateY: -900,
@@ -643,8 +644,8 @@ function onPointerMove(event) {
     cameraMouseX = event.clientX - windowHalfX;
     cameraMouseY = event.clientY - windowHalfY;
 
-    camera.rotation.y = (camera.rotation.y + (delta * -cameraMouseX * .03 * Math.PI / 180)) / 2;
-    camera.rotation.x = ((-cameraSettings.rotationX * Math.PI / 180) + (delta * -cameraMouseY * .03 * Math.PI /
+    camera.rotation.y = (camera.rotation.y + (delta * -cameraMouseX * 2.18 * Math.PI / 180)) / 2;
+    camera.rotation.x = ((-cameraSettings.rotationX * Math.PI / 180) + (delta * -cameraMouseY * 20.18 * Math.PI /
         180)) / 2;
 
 }
@@ -790,7 +791,7 @@ document.addEventListener('pointermove', onPointerMove);
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 window.addEventListener('resize', onWindowResize);
-// displayGUI();
+displayGUI();
 
 createLight(MASTER.STAGES[MASTER.CURRENT.STAGE].lights);
 createGrid();
