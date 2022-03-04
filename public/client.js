@@ -1,8 +1,8 @@
-import * as THREE from '/build/three.module.js';
-import Stats from '/jsm/libs/stats.module.js';
-import {
-    GUI
-} from '/jsm/libs/lil-gui.module.min.js';
+// import * as THREE from '/build/three.module.js';
+// import Stats from '/jsm/libs/stats.module.js';
+// import {
+//     GUI
+// } from '/jsm/libs/lil-gui.module.min.js';
 
 
 const scene = new THREE.Scene();
@@ -791,7 +791,7 @@ document.addEventListener('pointermove', onPointerMove);
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 window.addEventListener('resize', onWindowResize);
-displayGUI();
+// displayGUI();
 
 createLight(MASTER.STAGES[MASTER.CURRENT.STAGE].lights);
 createGrid();
