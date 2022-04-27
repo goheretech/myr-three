@@ -1,0 +1,57 @@
+<style>
+    #trans {
+        opacity: 0%;
+        transition: all 200ms;
+        background: white;
+    }
+
+    #trans.open {
+        opacity: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .imgScene {
+            width: 100vw;
+            height: 90vh;
+            background-size: 150%;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+<script>
+
+    const transElement = document.getElementById('trans');
+    const path = '/vision';
+
+    transElement.classList.remove("hidden");
+
+    document.addEventListener('readystatechange', event => {
+
+        
+        // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
+        if (event.target.readyState === "complete") {
+            transElement.classList.remove("open");
+            setTimeout(() => { transElement.classList.add("hidden"); }, 100);
+        }
+    });
+
+    window.addEventListener("scroll", function () {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight-100) {
+            changePages();
+        }
+
+    });
+
+    function changePages() {
+        transElement.classList.remove("hidden");
+        setTimeout(() => { transElement.classList.add("open"); }, 100);
+        setTimeout(() => { document.location.href = path }, 300);
+
+    }
+
+</script>

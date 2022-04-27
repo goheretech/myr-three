@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            height: 100vh;
+        }
+
+        body {
+            background: #000;
+            height: 500vh;
+        }
+
+        .imgScene{
+            width:100vw;
+            height:100vh;
+            background-size: cover;
+        }
+        /* canvas {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            max-height: 100vh;
+            max-width: 100vw;
+            transform: translate(-50%, -50%);
+        } */
+    </style>
+</head>
+
+<body>
+    <div
+        style=" position: fixed;left: 50%;top: 50%;max-height: 100vh;max-width: 100vw;transform: translate(-50%, -50%)"
+        id="hero-lightpass" />
+</body>
+<script type="text/javascript">
+
+    // const frameIndex = 0;
+
+    // requestAnimationFrame(() => updateImage(frameIndex + 1));
+
+
+    // const html = document.documentElement;
+    // const houseCanvas = document.getElementById("hero-lightpass");
+    // const context = houseCanvas.getContext("2d");
+
+    // const frameCount = 119;
+
+
+    // const currentFrame = index => (
+    //     `https://firebasestorage.googleapis.com/v0/b/gohere-24b3c.appspot.com/o/myrealty%2Fhouse${index.toString().padStart(3, '0')}.png?alt=media    `
+    // );
+
+
+
+    // const preloadImages = () => {
+    //     console.log('Preloading images');
+    //     for (let i = 1; i < frameCount; i++) {
+    //         const img = new Image();
+    //         img.src = currentFrame(i);
+    //     }
+    // };
+
+    // const img = new Image()
+    // img.src = currentFrame(1);
+    // houseCanvas.width = window.innerWidth;
+    // houseCanvas.height = window.innerHeight;
+    // img.onload = function () {
+    //     console.log('Starting Draw');
+    //     context.clearRect(0, 0, houseCanvas.width, houseCanvas.height);
+    //     // context.drawImage(img, 0, 0);
+
+    //     scaleToFill(this);
+    // }
+
+
+    // function scaleToFill(img) {
+    //     // get the scale
+    //     var scale = Math.max(houseCanvas.width / img.width, houseCanvas.height / img.height);
+    //     // get the top left position of the image
+    //     var x = (houseCanvas.width / 2) - (img.width / 2) * scale;
+    //     var y = (houseCanvas.height / 2) - (img.height / 2) * scale;
+    //     context.drawImage(img, x, y, img.width * scale, img.height * scale);
+    //     console.log('New Image Drawn');
+    // }
+
+    // const updateImage = index => {
+
+    //     img.src = currentFrame(index);
+    //     // context.clearRect(0, 0, houseCanvas.width, houseCanvas.height);
+    //     // context.drawImage(img, 0, 0);
+    // }
+
+    // window.addEventListener('scroll', () => {
+    //     const scrollTop = html.scrollTop;
+    //     const maxScrollTop = html.scrollHeight / 2 - window.innerHeight;
+    //     const scrollFraction = scrollTop / maxScrollTop;
+
+    //     const frameIndex = Math.min(
+    //         frameCount - 1,
+    //         Math.ceil(scrollFraction * frameCount)
+    //     );
+
+    //     requestAnimationFrame(() => updateImage(frameIndex + 1));
+    // });
+
+    // preloadImages()
+
+
+</script>
+
+<script>
+    const frameIndex = 0;
+
+    const html = document.documentElement;
+    const houseCanvas = document.getElementById("hero-lightpass");
+    // const context = houseCanvas.getContext("2d");
+
+
+    const frameCount = 119;
+    const images = [];
+
+
+    //Load images into array
+    addImages();
+
+
+    function addImages() {
+        console.log('Creating imgs');
+        for (let i = 0; i < frameCount; i++) {
+            images.push(`https://firebasestorage.googleapis.com/v0/b/gohere-24b3c.appspot.com/o/myrealty%2Fhouse${i.toString().padStart(3, '0')}.png?alt=media    `);
+            if (i + 1 == frameCount) {
+                addImagesDiv();
+            }
+        }
+    }
+
+    function addImagesDiv() {
+        console.log(`Images: ${images}`);
+        images.forEach((element, i) => {
+            let div = document.createElement("div");
+            div.style.backgroundImage = "url(" + element + ")";
+            div.style.zIndex = i;
+            div.classList.add("imgScene");
+            preload(element);
+            houseCanvas.appendChild(div);
+        });
+    }
+
+    function preload(url) {
+        var img = new Image();
+        img.src = url;
+    }
+
+    window.addEventListener("scroll", function() {
+      const y = window.scrollY;
+      const imgs = document.getElementsByClassName("imgScene");
+
+      const scrollTop = html.scrollTop;
+        const maxScrollTop = html.scrollHeight / 2 - window.innerHeight;
+        const scrollFraction = scrollTop / maxScrollTop;
+
+        const frameIndex = Math.min(
+            frameCount - 1,
+            Math.ceil(scrollFraction * frameCount)
+        );
+
+        // requestAnimationFrame(() => updateImage(frameIndex + 1));
+
+      if (imgs.length > 0) {
+        for (let i = 0; i < imgs.length; i++) {
+          const currentImg = imgs[i];
+          if (i <= frameIndex && i >= frameIndex - 2) {
+            currentImg.style.display = "flex";
+          } else {
+            currentImg.style.display = "none";
+          }
+        }
+      }
+
+      
+    });
+
+</script>
+
+
+</html>

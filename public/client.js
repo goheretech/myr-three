@@ -1,8 +1,6 @@
 // import * as THREE from '/build/three.module.js';
 // import Stats from '/jsm/libs/stats.module.js';
-// import {
-//     GUI
-// } from '/jsm/libs/lil-gui.module.min.js';
+// import {GUI} from '/jsm/libs/lil-gui.module.min.js';
 
 
 const scene = new THREE.Scene();
@@ -392,7 +390,7 @@ const MASTER = {
             ]
         }, {
             SETTINGS: {
-                background: 0x000000,
+                background: 0xffffff,
             },
             CAMERA: {
                 positionX: 1.671,
@@ -404,7 +402,7 @@ const MASTER = {
             },
             material: {
                 emissive: 0x000000,
-                color: 0x000000,
+                color: 0xffffff,
                 metalness: 0.0,
                 roughness: 0.833,
                 emissiveIntensity: 0.00,
