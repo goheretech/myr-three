@@ -424,14 +424,14 @@ const MASTER = {
             },
             {
                 color: 0x75e8f0,
-                brightness: 4.995,
+                brightness: 3.2,
                 positionX: 18.976,
                 positionY: 41,
                 positionZ: 76.442,
             },
             {
                 color: 0x5c91b9,
-                brightness: 2.026,
+                brightness: 0.6,
                 positionX: 46,
                 positionY: 9.301,
                 positionZ: 37.178,
