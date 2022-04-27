@@ -789,7 +789,7 @@ document.addEventListener('pointermove', onPointerMove);
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 window.addEventListener('resize', onWindowResize);
-displayGUI();
+// displayGUI();
 
 createLight(MASTER.STAGES[MASTER.CURRENT.STAGE].lights);
 createGrid();
