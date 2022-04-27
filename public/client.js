@@ -410,9 +410,9 @@ const MASTER = {
             },
             lights: [{
                 color: 0x79c0f2,
-                brightness: 2.978,
+                brightness: 5,
                 positionX: -28,
-                positionY: 19.378,
+                positionY: 15.378,
                 positionZ: -67.526,
             },
             {
@@ -423,10 +423,10 @@ const MASTER = {
                 positionZ: 47.977,
             },
             {
-                color: 0xf09475,
-                brightness: 0.82,
-                positionX: -25.644,
-                positionY: 25.137,
+                color: 0x75e8f0,
+                brightness: 4.995,
+                positionX: 18.976,
+                positionY: 41,
                 positionZ: 76.442,
             },
             {
@@ -789,7 +789,7 @@ document.addEventListener('pointermove', onPointerMove);
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 window.addEventListener('resize', onWindowResize);
-// displayGUI();
+displayGUI();
 
 createLight(MASTER.STAGES[MASTER.CURRENT.STAGE].lights);
 createGrid();
